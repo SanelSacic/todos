@@ -34,15 +34,5 @@ class TodoServiceCreateUnitTest extends UnitTest {
     // then
     assertThat(result.getTitle()).isNotNull();
   }
-
-  @Test
-  void whenTitleNull_thenThrowException() {
-    // given
-    final Todo todo = Todo.builder().build();
-
-    when(todoRepository.save(any(Todo.class))).thenThrow(RuntimeException.class);
-
-    // when & then
-    assertThrows(RuntimeException.class, () -> service.create(todo));
-  }
+  
 }
