@@ -24,4 +24,5 @@ jobs:
       working-directory: ./classic
       run: chmod +x gradlew
     - name: Build with Gradle
+      working-directory: ./classic
       run: ./gradlew build
